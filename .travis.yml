@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t abdulbasitnawab/docker-react-test2 -f Dovkerfile.dev .
 script:
-  - docker run abdulbasitnawab/docker-react-test2 npm run test -- --coverage
+  - docker run -e CI=true abdulbasitnawab/docker-react-test2 npm run test 
